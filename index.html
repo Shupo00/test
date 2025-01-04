@@ -3,51 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私のポートフォリオ</title>
+    <title>Shuji |Beginning Programmer </title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- カーソルエフェクト -->
+    <div class="cursor"></div>
+    
+    <!-- ヘッダー -->
     <header>
+        <div class="logo">Shuji's Portfolio.</div>
         <nav>
             <ul>
-                <li><a href="#about">自己紹介</a></li>
-                <li><a href="#skills">スキル</a></li>
-                <li><a href="#works">制作物</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#books" class="nav-link">Favorite Books</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- メインコンテンツ -->
     <main>
-        <section id="about">
-            <h2>自己紹介</h2>
-            <p>ここに自己紹介文を入れます</p>
+        <!-- ヒームセクション -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="SHUJI">SHUJI</h1>
+                <p class="subtitle">Beginning Programmer</p>
+                <div class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>スキル</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <!-- 他のスキルを追加 -->
-            </ul>
+        <!-- Aboutセクション -->
+        <section id="about" class="about">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>フロントエンド開発に情熱を持つ開発者です。</p>
+                        <p>モダンな技術とクリエイティブなデザインで、
+                           ユーザー体験の向上を目指しています。</p>
+                    </div>
+                    <div class="skills">
+                        <h3>興味のある技術</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Next.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="works">
-            <h2>制作物</h2>
-            <!-- ここに作品を追加 -->
+        <!-- Worksセクション -->
+        <section id="works" class="works">
+            <div class="section-container">
+                <h2 class="section-title">Works</h2>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="images/project1.jpg" alt="Project 1">
+                        </div>
+                        <div class="work-info">
+                            <h3>Project Title</h3>
+                            <p>プロジェクトの説明文がここに入ります。</p>
+                            <div class="work-links">
+                                <a href="#" class="btn">View Live</a>
+                                <a href="#" class="btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>お問い合わせ</h2>
-            <!-- 連絡先情報を追加 -->
+        <!-- 本セクション -->
+        <section id="books" class="books">
+            <div class="section-container">
+                <h2 class="section-title">Favorite Books</h2>
+                <div class="books-grid">
+                    <!-- 本1 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/なめらかな社会とその敵_.jpg" alt="なめらかな社会とその敵">
+                        </div>
+                        <div class="book-info">
+                            <h3>なめらかな社会とその敵</h3>
+                            <p class="author">鈴木 健</p>
+                            <p class="description">
+                                300年先を見据えた社会構想。複雑な世界を、複雑なまま生きることはいかにして可能か――。
+                            </p>
+                            <div class="tags">
+                                <span class="tag">貨幣</span>
+                                <span class="tag">投票</span>
+                                <span class="tag">法</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 本2 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/他者といる技法_.jpg" alt="他者といる技法">
+                        </div>
+                        <div class="book-info">
+                            <h3>他者といる技法──コミュニケーションの社会学</h3>
+                            <p class="author">奥村 隆</p>
+                            <p class="description">
+                              マナーやかげぐち等、他者といる際に用いる様々な技法。
+                              そのすばらしさと苦しみの両面を描く。
+                            </p>
+                            <div class="tags">
+                                <span class="tag">コミュニケーション</span>
+                                <span class="tag">社会学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 本3 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/人間非機械論_.jpg" alt="人間非機械論">
+                        </div>
+                        <div class="book-info">
+                            <h3>人間非機械論──サイバネティクスが開く未来 </h3>
+                            <p class="author">西田 洋平</p>
+                            <p class="description">
+                              現代科学の系譜をたどり、私たちの世界観を根本から覆す科学論。
+                            </p>
+                            <div class="tags">
+                                <span class="tag">科学哲学</span>
+                                <span class="tag">認識論</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コンタクトセクション -->
+        <section id="contact" class="contact">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                    </div>
+                    <a href="mailto:su.op.0678@gmail.com" class="email-link">
+                        su.op.0678@gmail.com
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 あなたの名前</p>
+        <p>&copy; 2024 Shuji. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
