@@ -371,3 +371,90 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ナンバーガーメニューのスタイルを更新 */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* ハンバーガーメニューが開いたときのアニメーション */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        padding: 100px 40px;
+        transition: 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.4s ease;
+    }
+
+    .nav-menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* メニュー項目が順番に表示されるアニメーション */
+    .nav-menu li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-menu li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-menu li:nth-child(3) { transition-delay: 0.3s; }
+    .nav-menu li:nth-child(4) { transition-delay: 0.4s; }
+    .nav-menu li:nth-child(5) { transition-delay: 0.5s; }
+
+    .nav-menu li a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* アクティブなリンクのスタイル */
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+        color: var(--accent-color);
+    }
+}
