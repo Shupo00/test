@@ -53,10 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ハンバーガーメニューの制御
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        body.classList.toggle('menu-open');
     });
 
     // メニューリンクをクリックしたらメニューを閉じる
@@ -64,6 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            body.classList.remove('menu-open');
         });
+    });
+
+    // メニュー外をクリックしたら閉じる
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
     });
 });
